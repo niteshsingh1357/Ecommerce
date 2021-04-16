@@ -1,0 +1,22 @@
+/* css for navbar */
+.navbar .nav-item {
+padding:0 10px !important;
+}
+.navbar .nav-link{
+    color: white !important;
+}
+
+.title {
+    padding: 15px;
+}
+.content {
+    padding: 50px 0px;
+}
+.custom-food-image {
+    border-radius:  1rem 1rem 0 0;
+    border: solid 1px;
+}
+
+.food-card .card, .food-card .card-body {
+border-radius:  1rem;
+}
