@@ -1,20 +1,31 @@
+import { Link } from "react-router-dom";
+import DetailView from "./details";
+import { useState } from 'react';
 
-const Food = ({ img, title }) => {
-  
+const FoodList = ({ img, title, id }) => {
+
+  const selectCard = () => {
+  };
+
   return (
     <>
-      {/* <div class='card-columns'></div> */}
-     
+      
         <div className='col-md-3 food-card p-3'>
-          <div className='card shadow'>
-            <img src={img} alt='no-image-found' className='img-fluid custom-food-image' />
+        <Link exact to=''>
+          <div className='card shadow' key={id} onClick={selectCard}>
+           <img
+              src={img}
+              alt={title}
+              className='img-fluid custom-food-image'
+            />
             <div className='card-body'>
-              <h6 class='card-title text-center'>{title}</h6>
+              <h6 className='card-title text-center'>{title}</h6>
             </div>
           </div>
+          </Link>
         </div>
     </>
   );
 };
 
-export default Food;
+export default FoodList;

@@ -15,6 +15,7 @@ padding:0 10px !important;
 .custom-food-image {
     border-radius:  1rem 1rem 0 0;
     border: solid 1px;
+    width: 500px !important;
 }
 
 .food-card .card, .food-card .card-body {
