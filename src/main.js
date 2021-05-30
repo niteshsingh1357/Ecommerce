@@ -11,12 +11,15 @@ const Main = () => {
   const [food, setfood] = useState([]);
   const [fruit, setfruit] = useState([]);
 
-  useEffect(async () => {
-    const response = await axios.get(
-      `https://api.edamam.com/search?q=vegitable&app_id=${APP_ID}&app_key=${APP_KEY}`
-    );
-    setfood(response.data.hits);
+  useEffect( () => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `https://api.edamam.com/search?q=vegitable&app_id=${APP_ID}&app_key=${APP_KEY}`
+      );
+      setfood(response.data.hits);
     console.log(response);
+    }
+   fetchData()
   }, []);
 
   // useEffect(async () => {
@@ -33,8 +36,8 @@ const Main = () => {
             <h2>Vegitables</h2>
           </div>
           <div className='row'>
-            {food.map((food) => (
-              <Food img={food.recipe.image} title={food.recipe.label} key={food.recipe.uri} id= {food.recipe.uri}/>
+            {food.map((food, index) => (
+              <Food img={food.recipe.image} title={food.recipe.label} key={food.recipe.uri} id= {index}/>
             ))}
           </div>
         </div>

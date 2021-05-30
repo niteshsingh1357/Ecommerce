@@ -9,7 +9,7 @@ const App = () => {
        <Navbar />
       <Switch>
         <Route exact path='/' component={Main} />
-        <Route exact path='/details' component={DetailView} />
+        <Route exact path='/details/:id' component={DetailView} />
       </Switch>
     </>
   );
